@@ -36,7 +36,7 @@ class SinatraOmniAuth < Sinatra::Base
   end
 
   get '/index' do
-    "#{session[:access_token]}"
+    @access_token = session[:access_token]
   end
 end
 SinatraOmniAuth.run! if __FILE__ == $0
